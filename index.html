@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(to right, green 0%, yellow 100%);
+    }
+
+    table{
+        border: solid lightblue 3px;
+        color: white;
+    }
+
+    img {
+        width: 250px;
+        height: auto;
+        border-radius: 30%;
+    }
+
+    a:link,
+    a:visited {
+        font-weight: blod;
+        text-decoration: none;
+        color: white;
+    }
+</style>
+</style>
+
+<body>
+
+    <table>
+        <form name="theform">
+            <tr>
+                <td>
+                    <h2>Currency Converter</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Convert USA Dolllars to other currencies</td>
+
+            </tr>
+
+            <tr>
+                <td rowspan="20"><img src="pic.jpg" alt=""></td>
+            </tr>
+
+            <tr>
+                <td><span style="float: right"> Enter USA dollar amount:: </span></td>
+                <td id="amount"><input name="amount" size="10"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Euro: </span></td>
+                <td style="background-color: white; color: black" id="EuroOutPut" ></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Pounds: </span></td>
+                <td style="background-color: white; color: black" id="PoundsoutPut"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Austrlian: </span></td>
+                <td style="background-color: white; color: black" id="AustralianoutPut"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Mexican: </span></td>
+                <td style="background-color: white; color: black" id="MexicanoutPut"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Candian: </span></td>
+                <td style="background-color: white; color: black" id="CandianoutPut"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Turkish: </span></td>
+                <td style="background-color: white; color: black" id="TurkishoutPut"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Japanese: </span></td>
+                <td style="background-color: white; color: black" id="JapaneseoutPut"></td>
+            </tr>
+            <tr>
+                <td><span style="float: right"> Swiss: </span></td>
+                <td style="background-color: white; color: black" id="SwissoutPut"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="cal" value="Calculate" onclick="calculate();">
+                    <input type="button" name="clear" value="Clear" onclick="clearinfo();">
+                </td>
+            </tr>
+        </form>
+
+    </table>
+    <script>
+
+        function calculate() {
+            const Euro = 0.84;
+            const Pounds = 0.77;
+            const Austrlian = 1.40;
+            const Mexican = 20.86;
+            const Candian = 1.31;
+            const Turkish = 7.96;
+            const Japanese = 104.76;
+            const Swiss = 0.90;
+
+            var dollars;
+            var Eurocal
+            var Poundscal
+            var Austrliancal
+            var Mexicancal
+            var Candiancal
+            var Turkishcal
+            var Japanesecal
+            var Swisscal
+
+
+            dollars = parseFloat(document.theform.amount.value);
+            Eurocal = parseFloat(Euro * dollars).toFixed(2)
+            Poundscal = parseFloat(Pounds * dollars).toFixed(2)
+            Austrliancal = parseFloat(Austrlian * dollars).toFixed(2)
+            Mexicancal = parseFloat(Mexican * dollars).toFixed(2)
+            Candiancal = parseFloat(Candian * dollars).toFixed(2)
+            Turkishcal = parseFloat(Turkish * dollars).toFixed(2)
+            Japanesecal = parseFloat(Japanese * dollars).toFixed(2)
+            Swisscal=parseFloat(Swiss * dollars).toFixed(2)
+
+
+
+
+            document.getElementById("EuroOutPut").innerHTML = "$ " + Eurocal;
+            document.getElementById("PoundsoutPut").innerHTML = "$ " + Poundscal;
+            document.getElementById("AustralianoutPut").innerHTML = "$ " + Austrliancal;
+            document.getElementById("MexicanoutPut").innerHTML = "$ " + Mexicancal;
+            document.getElementById("CandianoutPut").innerHTML = "$ " + Candiancal;
+            document.getElementById("TurkishoutPut").innerHTML = "$ " + Turkishcal;
+            document.getElementById("JapaneseoutPut").innerHTML = "$ " + Japanesecal;
+            document.getElementById("SwissoutPut").innerHTML = "$ " + Swisscal;
+
+
+
+
+
+
+
+            
+        }
+
+
+
+        function clearinfo() {
+            document.theform.amount.value = " ";
+
+
+            document.getElementById("EuroOutPut").innerHTML = " ";
+            document.getElementById("PoundsoutPut").innerHTML = " ";
+            document.getElementById("AustralianoutPut").innerHTML = " ";
+            document.getElementById("MexicanoutPut").innerHTML = " ";
+            document.getElementById("CandianoutPut").innerHTML= " ";
+            document.getElementById("TurkishoutPut").innerHTML= " ";
+            document.getElementById("JapaneseoutPut").innerHTML= " ";
+            document.getElementById("SwissoutPut").innerHTML= " ";
+
+            document.theform.amount.focus();
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+<a href="http://csnet.southtexascollege.edu/localuser/rortiz84/">Go Back to HomePage</a><br>
+<p style="color: white;"> Roy Ortiz</p><br>
+</html>
